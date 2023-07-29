@@ -1,9 +1,9 @@
 # CMakeList.txt : Pour le librairie libardrone
 cmake_minimum_required (VERSION 3.8)
 
-project (firmatac VERSION 0.0.1 LANGUAGES CXX)
+project (firmatac VERSION 0.0.1 LANGUAGES C)
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/includes)
 
 set ( SRC src/firmata.c src/serial.c src/servo.c )
 
