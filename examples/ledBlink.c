@@ -20,3 +20,20 @@ int             main()
     }
 }
 
+/*
+  while(!firmata->isReady) //Wait until device is up
+    firmata_pull(firmata);
+  firmata_pinMode(firmata, 7, MODE_OUTPUT); //set pin 13 (led on most arduino) to out
+  firmata_pinMode(firmata, 8, MODE_OUTPUT); //set pin 13 (led on most arduino) to out
+  while (1)
+    {
+      sleep(2);
+      if (i++ % 2) {
+        firmata_digitalWrite(firmata, 7, HIGH); //light led
+        firmata_digitalWrite(firmata, 8, LOW); //light led
+      } else {
+        firmata_digitalWrite(firmata, 8, HIGH); //unlight led
+        firmata_digitalWrite(firmata, 7, LOW); //unlight led
+      }
+    }
+*/

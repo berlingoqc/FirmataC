@@ -13,7 +13,7 @@ t_servo		*servo_attach(t_firmata *firmata, int pin)
       perror("servo_new::Firmata is not ready");
       return (NULL);
     }
-  res = malloc(sizeof(t_servo));
+  res = (t_servo*)malloc(sizeof(t_servo));
   if (!res)
     {
       perror("servo_new::malloc failed");
@@ -25,7 +25,6 @@ t_servo		*servo_attach(t_firmata *firmata, int pin)
   return (res);
 }
 
-int		servo_write(t_servo *servo, int value)
-{
-  return (firmata_analogWrite(servo->firmata, servo->pin, value));
+int servo_write(t_servo *servo, int value) {
+  return firmata_analogWrite(servo->firmata, servo->pin, value);
 }
